@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First Element of Array</title>
+</head>
+<body>
+  <h2>Open Console to See Output</h2>
+
+  <script>
+    function first(arr, n) {
+      if (!Array.isArray(arr)) return [];
+
+      if (n == null) {
+        return arr[0];
+      }
+
+      if (n < 0) {
+        return [];
+      }
+
+      return arr.slice(0, n);
+    }
+
+    console.log(first([7, 9, 0, -2]));
+    console.log(first([], 3));
+    console.log(first([7, 9, 0, -2], 3));
+    console.log(first([7, 9, 0, -2], 6));
+    console.log(first([7, 9, 0, -2], -3));
+  </script>
+</body>
+</html>
